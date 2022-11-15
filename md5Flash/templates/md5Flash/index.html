@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/md5.css' %}">
+    </head>
+    </head>
+    <body style="background-image: url({% static 'img/encode.jpeg' %});">
+        <center>
+            <div class="container">
+                <form method="post" class="box">
+                    <h2 id="chave">{{chave}}</h2>
+                    {% if flag %}
+                        <h3>{{flag}}</h3>
+                    {% endif %} 
+                    <input type="text" name="md5Flash" placeholder="md5">
+                    <button type="submit">enviar</button>
+                </form>
+            </div>
+        </center>
+    </body>
+</html>
